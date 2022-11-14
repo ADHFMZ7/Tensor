@@ -4,16 +4,17 @@
 class Scaler
 {
 
-  Scaler(float value=0.0, grad=0.0, )
+  Scaler(float value=0.0, float grad=0.0)
   {
      
     float value = value;
     float grad  = grad;
-    float backward
+
+    float _backward()
     {
       return 1.0;
     }
-    void* _backward = backward; 
+    void* _backward = _backward; 
   }
    
   Scaler operator +(Scaler const &other)
