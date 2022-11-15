@@ -1,6 +1,3 @@
-
-
-
 class Scaler
 {
 
@@ -31,5 +28,6 @@ class Scaler
     return res;
   }
 
+  
 
 };
