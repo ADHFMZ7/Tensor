@@ -1,33 +1,43 @@
 class Scaler
 {
-
+  public: 
   Scaler(float value=0.0, float grad=0.0)
   {
-     
-    float value = value;
-    float grad  = grad;
-
-    float _backward()
-    {
-      return 1.0;
-    }
-    void* _backward = _backward; 
+    value = value;
+    grad  = grad;
   }
-   
+
   Scaler operator +(Scaler const &other)
   {
     Scaler res;
-    res.value = value = a.value;
+    res.value = value = other.value;
     
-    float _backward()
-    {
-      this->grad = other.grad
-      other.grad = this->grad
-    }
-    this->_backward = _backward;
     return res;
   }
 
-  
+  Scaler operator -(Scaler const &other)
+  {
+    Scaler res;
+    res.value = value = other.value;
+    
+    return res;
+  }
 
+  Scaler operator *(Scaler const &other)
+  {
+    Scaler res;
+    res.value = value = other.value;
+    
+    return res;
+  }
+private:
+  float value;    
+  float grad;
+  
 };
+
+
+
+
+
+
